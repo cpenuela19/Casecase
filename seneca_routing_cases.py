@@ -206,40 +206,41 @@ class Case4CapacitatedDepots(VehicleRoutingModel):
                 ) <= model.DepotCapacity[d]
             )
 
+# Ejecutar Caso 1
 case1 = Case1Base(
-        clients_file=r"C:\Users\cpenu\Documents\6-semestre\MoS\MoS Proyecto2\case_1_base\case_1_base\Clients.csv",
-        depots_file=r"C:\Users\cpenu\Documents\6-semestre\MoS\MoS Proyecto2\case_1_base\case_1_base\multi_vehicles.csv",
-        drone_file=r"C:\Users\cpenu\Documents\6-semestre\MoS\MoS Proyecto2\case_1_base\case_1_base\drone_only.csv",
-        ev_file=r"C:\Users\cpenu\Documents\6-semestre\MoS\MoS Proyecto2\case_1_base\case_1_base\ev_only.csv",
-        gas_file=r"C:\Users\cpenu\Documents\6-semestre\MoS\MoS Proyecto2\case_1_base\case_1_base\gas_car_only.csv"
-    )
-    case1.solve()
-    case1.save_results("case_1_base_results.csv")
+    clients_file=r"C:\Users\cpenu\Documents\6-semestre\MoS\MoS Proyecto2\case_1_base\case_1_base\Clients.csv",
+    depots_file=r"C:\Users\cpenu\Documents\6-semestre\MoS\MoS Proyecto2\case_1_base\case_1_base\multi_vehicles.csv",
+    drone_file=r"C:\Users\cpenu\Documents\6-semestre\MoS\MoS Proyecto2\case_1_base\case_1_base\drone_only.csv",
+    ev_file=r"C:\Users\cpenu\Documents\6-semestre\MoS\MoS Proyecto2\case_1_base\case_1_base\ev_only.csv",
+    gas_file=r"C:\Users\cpenu\Documents\6-semestre\MoS\MoS Proyecto2\case_1_base\case_1_base\gas_car_only.csv"
+)
+case1.solve()
+case1.save_results("case_1_base_results.csv")
 
-    # Ejecutar Caso 2
-    case2 = Case2FiveClientsPerVehicle(
-        clients_file=r"C:\Users\cpenu\Documents\6-semestre\MoS\MoS Proyecto2\case_2_5_clients_per_vehicle\case_2_5_clients_per_vehicle\Clients.csv",
-        depots_file=r"C:\Users\cpenu\Documents\6-semestre\MoS\MoS Proyecto2\case_2_5_clients_per_vehicle\case_2_5_clients_per_vehicle\Depots.csv",
-        vehicles_file=r"C:\Users\cpenu\Documents\6-semestre\MoS\MoS Proyecto2\case_2_5_clients_per_vehicle\case_2_5_clients_per_vehicle\Vehicles.csv"
-    )
-    case2.solve()
-    case2.save_results("case_2_5_clients_per_vehicle_results.csv")
+# Ejecutar Caso 2
+case2 = Case2FiveClientsPerVehicle(
+    clients_file=r"C:\Users\cpenu\Documents\6-semestre\MoS\MoS Proyecto2\case_2_5_clients_per_vehicle\case_2_5_clients_per_vehicle\Clients.csv",
+    depots_file=r"C:\Users\cpenu\Documents\6-semestre\MoS\MoS Proyecto2\case_2_5_clients_per_vehicle\case_2_5_clients_per_vehicle\Depots.csv",
+    vehicles_file=r"C:\Users\cpenu\Documents\6-semestre\MoS\MoS Proyecto2\case_2_5_clients_per_vehicle\case_2_5_clients_per_vehicle\Vehicles.csv"
+)
+case2.solve()
+case2.save_results("case_2_5_clients_per_vehicle_results.csv")
 
-    # Ejecutar Caso 3
-    case3 = Case3BigDistancesSmallDemands(
-        clients_file=r"C:\Users\cpenu\Documents\6-semestre\MoS\MoS Proyecto2\case_3_big_distances_small_demands\case_3_big_distances_small_demands\Clients.csv",
-        depots_file=r"C:\Users\cpenu\Documents\6-semestre\MoS\MoS Proyecto2\case_3_big_distances_small_demands\case_3_big_distances_small_demands\Depots.csv",
-        vehicles_file=r"C:\Users\cpenu\Documents\6-semestre\MoS\MoS Proyecto2\case_3_big_distances_small_demands\case_3_big_distances_small_demands\Vehicles.csv"
-    )
-    case3.solve()
-    case3.save_results("case_3_big_distances_small_demands_results.csv")
+# Ejecutar Caso 3
+case3 = Case3BigDistancesSmallDemands(
+    clients_file=r"C:\Users\cpenu\Documents\6-semestre\MoS\MoS Proyecto2\case_3_big_distances_small_demands\case_3_big_distances_small_demands\Clients.csv",
+    depots_file=r"C:\Users\cpenu\Documents\6-semestre\MoS\MoS Proyecto2\case_3_big_distances_small_demands\case_3_big_distances_small_demands\Depots.csv",
+    vehicles_file=r"C:\Users\cpenu\Documents\6-semestre\MoS\MoS Proyecto2\case_3_big_distances_small_demands\case_3_big_distances_small_demands\Vehicles.csv"
+)
+case3.solve()
+case3.save_results("case_3_big_distances_small_demands_results.csv")
 
-    # Ejecutar Caso 4
-    case4 = Case4CapacitatedDepots(
-        clients_file=r"C:\Users\cpenu\Documents\6-semestre\MoS\MoS Proyecto2\case_4_capacitated_depots\case_4_capacitated_depots\Clients.csv",
-        depots_file=r"C:\Users\cpenu\Documents\6-semestre\MoS\MoS Proyecto2\case_4_capacitated_depots\case_4_capacitated_depots\Depots.csv",
-        vehicles_file=r"C:\Users\cpenu\Documents\6-semestre\MoS\MoS Proyecto2\case_4_capacitated_depots\case_4_capacitated_depots\Vehicles.csv",
-        depot_capacities_file=r"C:\Users\cpenu\Documents\6-semestre\MoS\MoS Proyecto2\case_4_capacitated_depots\case_4_capacitated_depots\DepotCapacities.csv"
-    )
-    case4.solve()
-    case4.save_results("case_4_capacitated_depots_results.csv")
+# Ejecutar Caso 4
+case4 = Case4CapacitatedDepots(
+    clients_file=r"C:\Users\cpenu\Documents\6-semestre\MoS\MoS Proyecto2\case_4_capacitated_depots\case_4_capacitated_depots\Clients.csv",
+    depots_file=r"C:\Users\cpenu\Documents\6-semestre\MoS\MoS Proyecto2\case_4_capacitated_depots\case_4_capacitated_depots\Depots.csv",
+    vehicles_file=r"C:\Users\cpenu\Documents\6-semestre\MoS\MoS Proyecto2\case_4_capacitated_depots\case_4_capacitated_depots\Vehicles.csv",
+    depot_capacities_file=r"C:\Users\cpenu\Documents\6-semestre\MoS\MoS Proyecto2\case_4_capacitated_depots\case_4_capacitated_depots\DepotCapacities.csv"
+)
+case4.solve()
+case4.save_results("case_4_capacitated_depots_results.csv")
