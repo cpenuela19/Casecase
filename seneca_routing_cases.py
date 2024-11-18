@@ -103,10 +103,6 @@ class VehicleRoutingModel:
         pd.DataFrame(results).to_csv(output_file, index=False)
 
 
-from pyomo.environ import *
-import pandas as pd
-import numpy as np
-
 class Case1Base:
     def __init__(self, clients_file, drone_file, ev_file, gas_file, multi_vehicles_file, num_depots=1):
         # Load and preprocess data
